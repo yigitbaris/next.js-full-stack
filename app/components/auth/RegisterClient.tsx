@@ -93,7 +93,7 @@ const RegisterClient: React.FC<RegisterClientProps> = ({ currentUser }) => {
           text='Google İle Üye Ol'
           icon={FcGoogle}
           outline
-          onClick={() => {}}
+          onClick={() => signIn('google')}
         />
       </div>
     </AuthContainer>
