@@ -4,15 +4,26 @@ import { NextResponse } from 'next/server'
 
 export async function POST(request: Request) {
   const currentUser = await getCurrentUser()
-  const body = await request.json()
-  const { name, email, password } = body
 
-  const user = await prisma.user.create({
+  if (!currentUser || currentUser.role !== 'ADMIN') {
+    return NextResponse.error()
+  }
+
+  const body = await request.json()
+
+  const { name, description, brand, category, price, inStock, image } = body
+
+  const product = await prisma.product.create({
     data: {
       name,
-      email,
+      description,
+      brand,
+      category,
+      price: parseFloat(price),
+      inStock,
+      image,
     },
   })
 
-  return NextResponse.json(user)
+  return NextResponse.json(product)
 }

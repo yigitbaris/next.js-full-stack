@@ -34,7 +34,7 @@ const UserMenu: React.FC<UserProps> = ({ currentUser }) => {
         <div>{currentUser ? currentUser.name : 'User'}</div>
       </div>
       {openMenu && (
-        <div className='absolute w-[150px] top-10 bg-white shadow-lg right-0 p-2 rounded-md'>
+        <div className='cursor-pointer absolute w-[150px] top-10 bg-white shadow-lg right-0 p-2 rounded-md'>
           {currentUser ? (
             <div className='space-y-1'>
               <div

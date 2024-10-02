@@ -5,4 +5,5 @@ const AuthContainer = ({ children }: { children: React.ReactNode }) => {
     </div>
   )
 }
+
 export default AuthContainer
