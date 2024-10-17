@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Banner from './components/home/Banner'
 import Category from './components/home/Category'
 import Products from './components/home/Products'

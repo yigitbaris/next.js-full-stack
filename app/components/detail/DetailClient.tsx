@@ -22,6 +22,7 @@ export type CardProductProps = {
 const DetailClient = ({ product }: { product: any }) => {
   const { productCartQty, addToBasket, cartPrdcts } = useCart()
   const [displayButton, setDisplayButton] = useState(false)
+  console.log(product, 'detail client product')
 
   const [cardProduct, setCardProduct] = useState<CardProductProps>({
     id: product.id,

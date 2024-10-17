@@ -1,13 +1,12 @@
 'use client'
 const Category = () => {
   const categoryList = [
+    { name: 'Bilgisayar' },
     { name: 'Ayakkabı' },
-    { name: 'Ayakkabı' },
-    { name: 'Ayakkabı' },
-    { name: 'Ayakkabı' },
-    { name: 'Ayakkabı' },
-    { name: 'Ayakkabı' },
-    { name: 'Ayakkabı' },
+    { name: 'Tablet' },
+    { name: 'Mikrofon' },
+    { name: 'Telefon' },
+    { name: 'Monitör' },
   ]
 
   return (
@@ -17,7 +16,7 @@ const Category = () => {
           className='border text-slate-500 rounded-full min-w-[120px] flex items-center justify-center cursor-pointer flex-1 px-4 py-2 text-center'
           key={index}
         >
-          {category.name}
+          <button>{category.name}</button>
         </div>
       ))}
     </div>
